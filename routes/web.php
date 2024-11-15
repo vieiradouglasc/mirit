@@ -54,3 +54,10 @@ Route::post('fornecedores', [FornecedorController::class, 'criarFornecedor'])->n
 Route::get('fornecedores/{fornecedor}/atualizar', [FornecedorController::class, 'formularioAtualizarFornecedor'])->name('fornecedor.atualizar.get');
 Route::post('fornecedores/{fornecedor}/atualizar', [FornecedorController::class, 'atualizarFornecedor'])->name('fornecedor.atualizar.post');
 Route::delete('fornecedores/{forcedorid}', [FornecedorController::class, 'deletarFornecedor'])->name('fornecedor.deletar');
+
+//Estoque
+Route::get('estoques', [EstoqueController::class, 'index'])->name('estoque.index');
+Route::post('estoques/criar', [EstoqueController::class, 'criarEstoque'])->name('estoque.criar.post');
+Route::get('estoques/{estoque}/atualizar', [EstoqueController::class, 'formularioAtualizarEstoque'])->name('estoque.atualizar.get');
+Route::post('estoques/{estoque}/atualizar', [EstoqueController::class, 'atualizarEstoque'])->name('estoque.atualizar.post');
+Route::delete('estoques/{estoqueid}', [EstoqueController::class, 'deletarEstoque'])->name('estoque.deletar');
