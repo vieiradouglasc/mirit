@@ -328,6 +328,11 @@ return [
             'icon' => 'far fa-user',
         ],
         [
+            'text' => 'Fornecedores',
+            'url' => 'fornecedores',
+            'icon' => 'fas fa-store',
+        ],
+        [
             'text' => 'Produtos',
             'url' => 'produtos',
             'icon' => 'fas fa-box',

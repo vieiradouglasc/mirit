@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EstoqueController;
+use App\Http\Controllers\FornecedorController;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -45,3 +47,10 @@ Route::post('produtos/criar', [ProdutoController::class, 'criarProduto'])->name(
 Route::get('produtos/{produto}/atualizar', [ProdutoController::class, 'formularioAtualizarProduto'])->name('produto.atualizar.get');
 Route::post('produtos/{produto}/atualizar', [ProdutoController::class, 'atualizarProduto'])->name('produto.atualizar.post');
 Route::delete('produtos/{produtoid}', [ProdutoController::class, 'deletarProduto'])->name('produto.deletar');
+
+//Fornecedores
+Route::get('fornecedores', [FornecedorController::class, 'index'])->name('fornecedor.index');
+Route::post('fornecedores', [FornecedorController::class, 'criarFornecedor'])->name('fornecedor.criar.post');
+Route::get('fornecedores/{fornecedor}/atualizar', [FornecedorController::class, 'formularioAtualizarFornecedor'])->name('fornecedor.atualizar.get');
+Route::post('fornecedores/{fornecedor}/atualizar', [FornecedorController::class, 'atualizarFornecedor'])->name('fornecedor.atualizar.post');
+Route::delete('fornecedores/{forcedorid}', [FornecedorController::class, 'deletarFornecedor'])->name('fornecedor.deletar');
